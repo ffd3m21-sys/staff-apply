@@ -60,7 +60,9 @@ export async function GET(req) {
     inServer,
     roles,
   });
-  const res = NextResponse.redirect(`${site}/apply`);
+  const next = req.cookies.get('oauth_next')?.value === '/admin' ? '/admin' : '/apply';
+  const res = NextResponse.redirect(`${site}${next}`);
   res.cookies.delete('oauth_state');
+  res.cookies.delete('oauth_next');
   return res;
 }
