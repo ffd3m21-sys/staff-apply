@@ -17,4 +17,4 @@
 1. Upload this folder to a GitHub repo.
 2. vercel.com -> Add New Project -> import the repo.
 3. Settings -> Environment Variables: add every name from `.env.example` with your values.
-4. Deploy. Put the final address in SITE_URL, then Redeploy.
+4. Deploy. Put the final address in SITE_URL, then Redeploy.l
